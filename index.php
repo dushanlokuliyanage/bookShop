@@ -19,6 +19,9 @@
             </a>
 
             <ul class="nav-menu">
+
+                <button id="btnClose" class="btn btn-close"></button>
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">Home</a>
                 </li>
@@ -38,7 +41,7 @@
                     <a href="#" class="nav-link">Contact</a>
                 </li>
             </ul>
-
+            <button id="menuOpenBtn" class="btn btn-dark">Menu</button>
         </nav>
 
     </header>
@@ -48,7 +51,7 @@
             <div class="section-content ">
                 <!-- Text Section -->
                 <div class="hero-details border">
-                    <h2 class="title">Best Books</h2>
+                    <h1 class="title">Best Books</h1>
                     <h3 class="subtitle">Read your fav books here</h3>
                     <p class="description">
                         Quotes about books emphasize their ability to provide "portable magic" and serve as loyal companions and gateways to knowledge and new experiences.
