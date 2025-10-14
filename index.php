@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Sites</title>
+    <title>Books</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap.css">
@@ -41,11 +41,12 @@
                     <a href="#" class="nav-link">Contact</a>
                 </li>
             </ul>
-            <button id="menuOpenBtn" class="btn btn-dark">Menu</button>
+            <button id="menuOpenBtn" class="btn btn-outline-light">=
+            </button>
         </nav>
 
     </header>
-
+    <!-- Heder Section -->
     <main>
         <section class="hero-section">
             <div class="section-content ">
@@ -71,9 +72,46 @@
                 </div>
             </div>
         </section>
+
+
+        <!-- About Section -->
+
+        <section class="about-section">
+            <div class="section-content">
+
+                <div class="about-image-wrapper">
+                    <img src="imges/wp4143648-harley-quinn-wallpapers.png" alt="About" class="about-image">
+                </div>
+
+                <div class="about-details border-about">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="text">
+                        Quotes about books emphasize their ability to provide "portable magic" and serve as loyal companions and gateways to knowledge and new experiences.
+                        Key themes include books as portals to other worlds, sources of truth and understanding, and tools for personal growth and travel.
+                        Famous phrases like, "A room without books is like a body without a soul" (Cicero) and "There is no friend as loyal as a book"
+                        (Ernest );
+                    </p>
+                    <div class="social-link-list">
+                           <!-- Add Icon Sciosl media -->
+                        <a href="" class="social-link">
+                             <!-- <i>I don't want add icon at the moment 2025/10/13 7.12pm</i> -->
+                            <button class="btn btn-sm btn-outline-dark">FB</button>
+                        </a>
+                          <a href="" class="social-link">
+                             <!-- <i>I don't want add icon at the moment 2025/10/13 7.12pm</i> -->
+                            <button class="btn btn-sm btn-outline-dark">FB</button>
+                        </a>
+                          <a href="" class="social-link">
+                            <!-- <i>I don't want add icon at the moment 2025/10/13 7.12pm</i> -->
+                            <button class="btn btn-sm btn-outline-dark">FB</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
-
-
 
     <script src="script.js"></script>
 </body>
