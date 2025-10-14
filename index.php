@@ -92,22 +92,134 @@
                         (Ernest );
                     </p>
                     <div class="social-link-list">
-                           <!-- Add Icon Sciosl media -->
+                        <!-- Add Icon Sciosl media -->
                         <a href="" class="social-link">
-                             <!-- <i>I don't want add icon at the moment 2025/10/13 7.12pm</i> -->
+                            <!-- <i>I don't want add icon at the moment 2025/10/13 7.12pm</i> -->
                             <button class="btn btn-sm btn-outline-dark">FB</button>
                         </a>
-                          <a href="" class="social-link">
-                             <!-- <i>I don't want add icon at the moment 2025/10/13 7.12pm</i> -->
+                        <a href="" class="social-link">
+                            <!-- <i>I don't want add icon at the moment 2025/10/13 7.12pm</i> -->
                             <button class="btn btn-sm btn-outline-dark">FB</button>
                         </a>
-                          <a href="" class="social-link">
+                        <a href="" class="social-link">
                             <!-- <i>I don't want add icon at the moment 2025/10/13 7.12pm</i> -->
                             <button class="btn btn-sm btn-outline-dark">FB</button>
                         </a>
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+
+        <!-- Menu Sectioon -->
+        <section class="menu-section">
+            <h2 class="section-title">Our Books</h2>
+            <div class="section-content">
+                <ul class="menu-list">
+                    <li class="menu-item border-menu">
+                        <img src="imges/download.png" alt="Books" class="menu-img">
+                        <h3 class="name">Imore you Spoekn</h3>
+                        <p class="tect">You know Someoen who read books
+                            they are interligent preoson So let's start
+                            today read reading books
+                        </p>
+                    </li>
+
+                    <li class="menu-item border-menu">
+                        <img src="imges/1200x1200wz.png" alt="Books" class="menu-img">
+                        <h3 class="name">Imore you Spoekn</h3>
+                        <p class="tect">You know Someoen who read books
+                            they are interligent preoson So let's start
+                            today read reading books
+                        </p>
+                    </li>
+
+                    <li class="menu-item border-menu">
+                        <img src="imges/1200x1200wz.png" alt="Books" class="menu-img">
+                        <h3 class="name">Imore you Spoekn</h3>
+                        <p class="tect">You know Someoen who read books
+                            they are interligent preoson So let's start
+                            today read reading books
+                        </p>
+                    </li>
+
+                    <li class="menu-item border-menu">
+                        <img src="imges/1200x1200wz.png" alt="Books" class="menu-img">
+                        <h3 class="name">Imore you Spoekn</h3>
+                        <p class="tect">You know Someoen who read books
+                            they are interligent preoson So let's start
+                            today read reading books
+                        </p>
+                    </li>
+
+                    <li class="menu-item border-menu">
+                        <img src="imges/1200x1200wz.png" alt="Books" class="menu-img">
+                        <h3 class="name">Imore you Spoekn</h3>
+                        <p class="tect">You know Someoen who read books
+                            they are interligent preoson So let's start
+                            today read reading books
+                        </p>
+                    </li>
+
+                    <li class="menu-item border-menu">
+                        <img src="imges/1200x1200wz.png" alt="Books" class="menu-img">
+                        <h3 class="name">Imore you Spoekn</h3>
+                        <p class="tect">You know Someoen who read books
+                            they are interligent preoson So let's start
+                            today read reading books
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+
+        <section class="contact-section ">
+            <div class="section-content border-contact">
+                <h2 class="section-title">Contact Us</h2>
+                <ul class="contact-info-list">
+                    <li class="contact-info">
+                        <!-- <i class="#">Add Icon</i> -->
+                        <p>350 A Colombo 7, Branse Place</p>
+                    </li>
+
+                    <li class="contact-info">
+                        <!-- <i class="#">Add Icon</i> -->
+                        <p>dushanlokuliyanage@gmail.com</p>
+                    </li>
+
+                    <li class="contact-info">
+                        <!-- <i class="#">Add Icon</i> -->
+                        <p>+94 75 925 5256</p>
+                    </li>
+
+                    <li class="contact-info">
+                        <!-- <i class="#">Add Icon</i> -->
+                        <p>Monday - Friday: 9.00 AM - 5.00 PM</p>
+                    </li>
+
+                    <li class="contact-info">
+                        <!-- <i class="#">Add Icon</i> -->
+                        <p>Sunday: Closed </p>
+                    </li>
+
+                    <li class="contact-info">
+                        <!-- <i class="#">Add Icon</i> -->
+                        <a href="http://itsme-dm.github.io" style="text-decoration: none;" target="_blank">
+                            <p>www.itsme.com</p>
+                        </a>
+
+                    </li>
+                </ul>
+                <form action="#" class="contact-form">
+                    <input type="text" placeholder="Your name" class="form-input" required>
+                    <input type="email" placeholder="Your Email" class="form-input" required>
+                    <textarea name="" id="" class="form-input" placeholder="Your Meassage" required></textarea>
+                    <button class="submit-button">Submit</button>
+                </form>
             </div>
         </section>
 
