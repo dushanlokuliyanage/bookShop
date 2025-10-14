@@ -214,10 +214,10 @@
 
                     </li>
                 </ul>
-                <form action="#" class="contact-form">
-                    <input type="text" placeholder="Your name" class="form-input" required>
-                    <input type="email" placeholder="Your Email" class="form-input" required>
-                    <textarea name="" id="" class="form-input" placeholder="Your Meassage" required></textarea>
+                <form action="connect.php" class="contact-form" method="post">
+                    <input type="text" placeholder="Your name" class="form-input" name="name" required>
+                    <input type="email" placeholder="Your Email" class="form-input" name="email" required>
+                    <textarea name="textarea" id="" class="form-input" placeholder="Your Meassage"  required></textarea>
                     <button class="submit-button">Submit</button>
                 </form>
             </div>
