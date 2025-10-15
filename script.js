@@ -8,3 +8,31 @@ menuOpenBtn.onclick = () => {
 closeBtn.onclick = () => {
   menuOpenBtn.click();
 };
+
+
+
+//Data Send
+
+let name = document.getElementById('name');
+let email = document.getElementById('email');
+let textarea = document.getElementById('textarea');
+
+let form = new FormData();
+
+form.append("n", name.value);
+form.append("e", email.value);
+form.append("t", textarea.value);
+
+let request = new XMLHttpRequest();
+
+request.onreadystatechange = () => {
+if(request.readyState == 4 && request.status == 200){
+     let response = request.responseText;
+     alert(response);
+}
+
+request.open("POST","messageProcess.php" , true);
+request.send(form);
+
+
+}
