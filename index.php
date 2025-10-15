@@ -218,7 +218,7 @@
                     <input id="name" type="text" placeholder="Your name" class="form-input" name="name" required>
                     <input id="email" type="email" placeholder="Your Email" class="form-input" name="email" required>
                     <textarea  name="textarea" id="textarea" class="form-input" placeholder="Your Meassage"  required></textarea>
-                    <button class="submit-button">Submit</button>
+                    <button class="submit-button" id="submit">Submit</button>
                 </form>
             </div>
         </section>

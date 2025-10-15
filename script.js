@@ -11,28 +11,35 @@ closeBtn.onclick = () => {
 
 
 
+
 //Data Send
 
-let name = document.getElementById('name');
-let email = document.getElementById('email');
-let textarea = document.getElementById('textarea');
+const sendBtn = document.getElementById('submit');
 
-let form = new FormData();
+sendBtn.onclick = (e) => {
+  e.preventDefault();
 
-form.append("n", name.value);
-form.append("e", email.value);
-form.append("t", textarea.value);
+  let name = document.getElementById('name');
+  let email = document.getElementById('email');
+  let textarea = document.getElementById('textarea');
 
-let request = new XMLHttpRequest();
+  let form = new FormData();
+  form.append("n", name.value);
+  form.append("e", email.value);
+  form.append("t", textarea.value);
 
-request.onreadystatechange = () => {
-if(request.readyState == 4 && request.status == 200){
-     let response = request.responseText;
-     alert(response);
-}
+  let request = new XMLHttpRequest();
+  request.onreadystatechange = () => {
+    if (request.readyState == 4 && request.status == 200) {
+      let response = request.responseText;
+      if (response == 'success') {
+        alert("Thank You!");
+      }
+    }
+  };
 
-request.open("POST","messageProcess.php" , true);
-request.send(form);
+  request.open("POST", "messageProcess.php", true);
+  request.send(form);
+};
 
 
-}
