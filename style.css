@@ -115,7 +115,7 @@ header .navbar {
   gap: 20px;
 }
 
-.navbar .nav-menu .nav-link {
+/* .navbar .nav-menu .nav-link {
   color: var(--black-color);
   padding: 10px 18px;
   background: var(--light-pink-color);
@@ -123,12 +123,12 @@ header .navbar {
   font-size: var(--font-size-medium);
   transition: 0.3s ease;
   height: 40px;
-}
+} */
 
-.navbar .nav-menu .nav-link:hover {
+/* .navbar .nav-menu .nav-link:hover {
   background: var(--success-color);
   color: var(--whiete-color);
-}
+} */
 
 .hero-section .section-content {
   display: flex;

@@ -22,24 +22,31 @@
 
                 <button id="btnClose" class="btn btn-close"></button>
 
-                <li class="nav-item">
+                <li class=" btn btn-outline-dark ">
                     <a href="#" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="btn btn-outline-dark ">
                     <a href="#" class="nav-link">About</a>
                 </li>
-                <li class="nav-item">
+                <li class=" btn btn-outline-dark ">
                     <a href="#" class="nav-link">Menu</a>
                 </li>
-                <li class="nav-item">
+                <li class="btn btn-outline-dark ">
                     <a href="#" class="nav-link">Feedback</a>
                 </li>
-                <li class="nav-item">
+                <li class=" btn btn-outline-dark">
                     <a href="#" class="nav-link">Gallery</a>
                 </li>
-                <li class="nav-item">
+                <li class=" btn btn-outline-dark ">
                     <a href="#" class="nav-link">Contact</a>
                 </li>
+                <a href="register.php">
+                    <button class="btn btn-outline-dark" style="width: 250px;">Register</button>
+                </a>
+
+                <a href="#">
+                    <button class="btn btn-outline-dark" style="width: 100px;">Log In</button>
+                </a>
             </ul>
             <button id="menuOpenBtn" class="btn btn-outline-light">=
             </button>
@@ -70,6 +77,8 @@
                 <div class="hero-image-wrapper">
                     <img src="imges/dark2x.png" alt="Hero" class="hero-image">
                 </div>
+
+
             </div>
         </section>
 
@@ -217,7 +226,7 @@
                 <form action="#" class="contact-form" method="post">
                     <input id="name" type="text" placeholder="Your name" class="form-input" name="name" required>
                     <input id="email" type="email" placeholder="Your Email" class="form-input" name="email" required>
-                    <textarea  name="textarea" id="textarea" class="form-input" placeholder="Your Meassage"  required></textarea>
+                    <textarea name="textarea" id="textarea" class="form-input" placeholder="Your Meassage" required></textarea>
                     <button class="submit-button" id="submit">Submit</button>
                 </form>
             </div>
