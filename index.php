@@ -214,7 +214,7 @@
 
                     </li>
                 </ul>
-                <form action="connect.php" class="contact-form" method="post">
+                <form action="pdo.php" class="contact-form" method="post">
                     <input type="text" placeholder="Your name" class="form-input" name="name" required>
                     <input type="email" placeholder="Your Email" class="form-input" name="email" required>
                     <textarea name="textarea" id="" class="form-input" placeholder="Your Meassage"  required></textarea>
