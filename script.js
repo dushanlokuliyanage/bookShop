@@ -32,8 +32,10 @@ sendBtn.onclick = (e) => {
   request.onreadystatechange = () => {
     if (request.readyState == 4 && request.status == 200) {
       let response = request.responseText;
+      console.log(response);
       if (response == 'success') {
         alert("Thank You!");
+        console.log(response);
       }
     }
   };

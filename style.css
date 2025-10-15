@@ -8,6 +8,8 @@
   font-family: "Poppins", sans-serif;
 }
 
+
+
 :root {
   /* colors */
   --primary-color: #24556f;
@@ -359,6 +361,8 @@ header .navbar {
   background-color: rgb(219, 222, 192);
   width: 100%;
 }
+
+
 
 /* Responsive media quary for may woth 1024px */
 @media screen and (max-width: 1024px) {
