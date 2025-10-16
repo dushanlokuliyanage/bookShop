@@ -3,14 +3,14 @@
 session_start();
 include "pdoConnection.php";
 
-$firstName = $_POST['fname'];
-$lastName = $_POST['lname'];
-$gmail = $_POST['gmail'];
-$password = $_POST['password'];
-$pNumber = $_POST['pNumber'];
-$address = $_POST['address'];
-$gender = $_POST['gender'];
-$nic = $_POST['nic'];
+$firstName = $_POST['fname'] ?? "";
+$lastName = $_POST['lname']  ?? "";
+$gmail = $_POST['gmail']  ?? "";
+$password = $_POST['password'] ?? "";
+$pNumber = $_POST['pNumber'] ?? "";
+$address = $_POST['address'] ?? "";
+$gender = $_POST['gender'] ?? "";
+$nic = $_POST['nic'] ?? "";
 
 // --- Validation section ---
 
@@ -35,12 +35,18 @@ elseif (!preg_match('/^[0-9]{9}[VvXx]?$|^[0-9]{12}$/', $nic)) $errors[] = "Inval
 
 // --- If validation fails ---
 if (!empty($errors)) {
+
+    $data = [$firstName, $lastName, $gmail, $password, $pNumber, $address, $gender, $nic];
+    $_SESSION['data'] = $data;
+
+
     foreach ($errors as $error) {
         // echo "<p style='color:red;'>$error</p>";
         $_SESSION['error'] = $error;
         header("Location: register.php");
         exit();
     }
+
     // echo "<a href='index.php'>Go Back</a>";
     // exit;
 } else {
@@ -57,10 +63,19 @@ if (!empty($errors)) {
         'nic' => $nic
     ]);
 
-    // echo "<h2 style='color:green;> Thank you for you share your Sensitive data With Us ! </h2>";
-    // header("refresh:2; url=index.php");
-
-    $_SESSION['success'] = "Thank you for you share your Sensitive data With Us !";
-    //  header("refresh:2; url=index.php");
+    echo '<!doctype html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="2;url=index.php">
+    <title>Redirecting...</title>
+    <style>body{font-family:Arial,Helvetica,sans-serif;text-align:center;padding:40px}</style>
+    </head><body><h2 style="color:green">
+    Thank you — your submission was received.
+    </h2><p>Redirecting to the homepage in 2 seconds...
+    </p><script>setTimeout(function(){window.location.href="index.php";},2000);</script></body></html>';
+    exit;
+    $_SESSION['success'];
+    header("refresh:2; url=index.php");
     exit();
 };
