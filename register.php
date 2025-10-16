@@ -29,31 +29,49 @@
                     <div class="row g-2">
 
                         <div class="col-12 mb-5">
+
                             <center> <samp class="title" style="font-size: x-large;">SignUp In Us</samp></center>
                         </div>
 
                         <div class="col-12 " id="errorDiv">
-                            <div class="alert alert-danger" role="alert" id="errorMsg"></div>
+                            <div class="alert alert-danger" role="alert" id="errorMsg">
+                                <?php
+                                session_start();
+                                echo '<div id="error">';
+                                if (isset($_SESSION['error'])) {
+                                    echo "<p>" . $_SESSION['error'] . "</p>";
+                                }
+                                echo '</div>';
+                                unset($_SESSION['error']);
+
+                                if (isset($_SESSION['success'])) {
+                                    echo "<div>" . $_SESSION['success'] . "</div>";
+                                    unset($_SESSION['success']);
+                                }
+                          
+                                ?>
+
+                            </div>
                         </div>
 
                         <div class="col-6">
                             <lable class="form-label">First Name</lable>
-                            <input type="text" class="form-control"  id="fname" name="fname" >
+                            <input type="text" class="form-control" id="fname" name="fname">
                         </div>
 
                         <div class="col-6">
                             <lable class="form-label">Last Name</lable>
-                            <input type="text" class="form-control"  id="lname " name="lname">
+                            <input type="text" class="form-control" id="lname " name="lname">
                         </div>
 
                         <div class="col-12">
                             <lable class="form-label">Email</lable>
-                            <input type="email" class="form-control"  name="gmail">
+                            <input type="email" class="form-control" name="gmail">
                         </div>
 
                         <div class="col-6">
                             <lable class="form-label">Password</lable>
-                            <input type="password" class="form-control"  id="password" name="password">
+                            <input type="password" class="form-control" id="password" name="password">
                         </div>
 
                         <div class="col-6">
@@ -63,7 +81,7 @@
 
                         <div class="col-12">
                             <lable class="form-label">Address</lable>
-                            <input type="text" class="form-control"  id="address" name="address">
+                            <input type="text" class="form-control" id="address" name="address">
                         </div>
 
                         <div class="col-6">
@@ -77,7 +95,7 @@
 
                         <div class="col-6">
                             <lable class="form-label">Nic</lable>
-                            <input type="text" class="form-control"  id="nic" name="nic">
+                            <input type="text" class="form-control" id="nic" name="nic">
                         </div>
 
                         <div class="col-12 d-grid">
