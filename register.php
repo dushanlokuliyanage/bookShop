@@ -14,7 +14,6 @@ session_start();
     <!-- Link Style -->
     <link rel="stylesheet" href="bootstrap.css">
 
-
     <!-- Favriout Icon -->
     <link rel="icon" href="#" type="image/x-icon">
 
@@ -38,25 +37,21 @@ session_start();
                             <center> <samp class="title" style="font-size: x-large;">SignUp In Us</samp></center>
                         </div>
 
-                        <div class="col-12 " id="errorDiv">
-                            <div class="alert alert-danger" role="alert" id="errorMsg">
-                                <?php
-                                echo '<div id="error">';
-                                if (isset($_SESSION['error'])) {
-                                    echo "<p>" . $_SESSION['error'] . "</p>";
-                                }
-                                echo '</div>';
-                                unset($_SESSION['error']);
+                        <?php
+                        if (!empty($_SESSION['error'])) {
+                            echo '<div class="col-12" id="errorDiv">
+                                    <div class="alert alert-danger" role="alert" id="errorMsg">
+                                        <div id="error">' . htmlspecialchars($_SESSION['error'], ENT_QUOTES) . '</div>
+                                    </div>
+                                  </div>';
+                            unset($_SESSION['error']);
+                        }
 
-                                if (isset($_SESSION['success'])) {
-                                    unset($_SESSION['success']);
-                                    unset($_SESSION['data']);
-                                }
-
-                                ?>
-
-                            </div>
-                        </div>
+                        if (isset($_SESSION['success'])) {
+                            unset($_SESSION['success']);
+                            unset($_SESSION['data']);
+                        }
+                        ?>
 
                         <div class="col-6">
                             <lable class="form-label">First Name</lable>

@@ -44,7 +44,7 @@
                     <button class="btn btn-outline-dark" style="width: 250px;">Register</button>
                 </a>
 
-                <a href="#">
+                <a href="logIn.php">
                     <button class="btn btn-outline-dark" style="width: 100px;">Log In</button>
                 </a>
             </ul>
