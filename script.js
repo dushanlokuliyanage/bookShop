@@ -9,19 +9,16 @@ closeBtn.onclick = () => {
   menuOpenBtn.click();
 };
 
-
-
-
 //Data Send
 
-const sendBtn = document.getElementById('submit');
+const sendBtn = document.getElementById("submit");
 
 sendBtn.onclick = (e) => {
   e.preventDefault();
 
-  let name = document.getElementById('name');
-  let email = document.getElementById('email');
-  let textarea = document.getElementById('textarea');
+  let name = document.getElementById("name");
+  let email = document.getElementById("email");
+  let textarea = document.getElementById("textarea");
 
   let form = new FormData();
   form.append("n", name.value);
@@ -33,7 +30,7 @@ sendBtn.onclick = (e) => {
     if (request.readyState == 4 && request.status == 200) {
       let response = request.responseText;
       console.log(response);
-      if (response == 'success') {
+      if (response == "success") {
         alert("Thank You!");
         console.log(response);
       }
@@ -44,4 +41,22 @@ sendBtn.onclick = (e) => {
   request.send(form);
 };
 
+let image = document.getElementById("profileImage");
+let inputImage = document.getElementById("imageFile");
 
+image.addEventListener("click", () => {
+  preventDefault();
+  inputImage.click();
+});
+
+inputImage.addEventListener("change", () => {
+  const file = this.files[0];
+  console.log(file);
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      image.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+});

@@ -189,6 +189,15 @@ header .navbar {
   border-radius: var(--border-radius-circle);
 }
 
+.profileImage{
+    width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius-circle);
+margin-left: 50px;
+}
+
+
 .about-details {
   color: white;
   max-width: 600px;

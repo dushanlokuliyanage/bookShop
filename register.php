@@ -87,7 +87,7 @@ session_start();
                             <lable class="form-label">Gender</lable>
                             <select name="gender" class="form-control" id="gender" value="<?php echo htmlspecialchars($_SESSION['data'][6] ?? '', ENT_QUOTES); ?>">
 
-                                <option value="male" required>Male</option>
+                                <option value="Male" required>Male</option>
                                 <option value="Female" required>Female</option>
                             </select>
                         </div>
@@ -101,9 +101,11 @@ session_start();
                             <button class="btn btn-outline-primary">Sign Up</button>
                         </div>
 
-                        <div class="col-12 d-grid">
-                            <button class="btn btn-outline-dark">Already have an account? Sign In </button>
-                        </div>
+                        <a href="logIn.php" style="text-decoration: none;">
+                            <div class="col-12 d-grid">
+                                <button class="btn btn-outline-dark">Already have an account? Sign In </button>
+                            </div>
+                        </a>
 
                     </div>
                 </div>

@@ -56,24 +56,33 @@ if (!empty($errors)) {
         ':firstName' => $firstName,
         ':lastName' => $lastName,
         ':gmail' => $gmail,
-        ':password' => $password,
+        ':password' => md5($password),
         ':pNumber' => $pNumber,
         ':address' => $address,
         ':gender' => $gender,
         'nic' => $nic
     ]);
 
-    echo '<!doctype html>
+    echo 
+    '<!doctype html>
     <html>
     <head>
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="2;url=index.php">
     <title>Redirecting...</title>
     <style>body{font-family:Arial,Helvetica,sans-serif;text-align:center;padding:40px}</style>
-    </head><body><h2 style="color:green">
-    Thank you — your submission was received.
-    </h2><p>Redirecting to the homepage in 2 seconds...
-    </p><script>setTimeout(function(){window.location.href="index.php";},2000);</script></body></html>';
+    </head>
+
+    <body>
+
+    <h2 style="color:green"> Thank you — your submission was received.</h2>
+
+    <p>Redirecting to the homepage in 2 seconds...</p>
+
+    <script>setTimeout(function(){window.location.href="logIn.php";},2000);</script>
+
+    </body>
+    </html>';
     exit;
     $_SESSION['success'];
     header("refresh:2; url=index.php");

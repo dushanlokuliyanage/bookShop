@@ -1,5 +1,6 @@
 <?php session_start();
-var_dump($_SESSION["data"]);
+// var_dump($_SESSION["data"]);
+
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +47,7 @@ var_dump($_SESSION["data"]);
                     }
 
                      if (isset($_SESSION['user'])) {
-                        unset($_SESSION['data']);
+                         unset($_SESSION['data']);
                     }
 
                     ?>
@@ -54,7 +55,7 @@ var_dump($_SESSION["data"]);
 
                     <div class="col-12">
                         <lable class="form-lable">Email</lable>
-                        <input type="email" class="form-control" name="gmail" value="<?php echo htmlspecialchars($_SESSION['data'][0] ?? '', ENT_QUOTES) ?>">
+                        <input type="email" class="form-control" name="gmail" value="<?php echo htmlspecialchars($_SESSION['data'][0] ?? '', ENT_QUOTES); ?>">
                     </div>
 
                     <div class="col-12">
