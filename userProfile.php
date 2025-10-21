@@ -25,50 +25,49 @@ if (!isset($_SESSION['user'])) {
                 position: relative;
                 height: 100%;
             }
+
         </style>
 
     </head>
 
     <body>
 
+        <!-- About Image -->
 
-        <div class="">
+        <div class="#">
 
-            <div class="container vh-100 justify-content-center align-items-center d-flex ">
+            <div class="container vh-100 justify-content-center align-items-center d-flex  ">
                 <div class="col-12 col-md-8 col-lg-4 bg-light p-5 shadow rounded-4 row g-4">
 
-                    <h4 style="color: lightseagreen; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;"> Its,<?php echo $_SESSION['user']['firstName'] ?> </h4>
-
-                    <div>
-                        <input type="image" src="imges/wp4143648-harley-quinn-wallpapers.png" class="profileImage" id="profileImage">
-                        <input type="file" id="imageFile" style="display: none;" accept="image/*">
-                    </div>
-
-
-
-                    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
-                        <h5 style="color: lightslategray;">About Me</h5>
-                        <p> "A room without books is like a body without a soul" (Cicero) and "There is no
-                            friend as loyal as a book" (Ernest Hemingway) capture the profound connection
-                            people have with books.</p>
-                    </div>
-
-                    <div class="g-2 row col-12 justify-content-center">
-
-                        <!-- <div class="col-4 d-grid ">
-                        <button class="btn btn-outline-dark">Clacel</button>
-                              </div> -->
-
-                        <div class="col-6 d-grid ">
-                            <button class="btn btn-outline-primary">Update </button>
+                    <form action="uploadProfile.php" method="POST" enctype="multipart/form-data">
+                        <h4 style="color: lightseagreen; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;"> Its,<?php echo $_SESSION['user']['firstName'] ?> </h4>
+                        <div>
+                            <img src="imges/wp4143648-harley-quinn-wallpapers.png" class="profileImage" id="profileImage" style="cursor: pointer;">
+                            <input type="file" id="fileInput" style="display: none;" accept="image/*" name="profileImage">
                         </div>
-                    </div>
+
+                        <div style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                            <h5 style="color: lightslategray;" class="mt-3">About Me</h5>
+                            <p> "A room without books is like a body without a soul" (Cicero) and "There is no
+                                friend as loyal as a book" (Ernest Hemingway) capture the profound connection
+                                people have with books.
+                            </p>
+                        </div>
+
+                        <div class="g-2 row col-12 justify-content-center">
+                            <div class="col-6 d-grid ">
+                                <button class="btn btn-outline-primary">Update </button>
+                            </div>
+                        </div>
+                    </form>
 
                 </div>
 
             </div>
 
-            <div class="container vh-100 justify-content-end align-items-center d-flex ">
+            <!-- About Datails -->
+
+            <div class="container vh-100 justify-content-center align-items-center d-flex ">
                 <div class="col-12 col-md-8 col-lg-8 bg-light p-5 shadow rounded-4 row g-4">
 
                     <h4 style="color: lightseagreen; font-family: Verdana, Geneva, Tahoma, sans-serif;">Personal Datails</h4>
@@ -130,8 +129,8 @@ if (!isset($_SESSION['user'])) {
         </div>
 
 
-
-
+        <!-- Link Js -->
+        <script src="script.js"></script>
     </body>
 
     </html>

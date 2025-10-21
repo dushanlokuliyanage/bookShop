@@ -41,22 +41,24 @@ sendBtn.onclick = (e) => {
   request.send(form);
 };
 
-let image = document.getElementById("profileImage");
-let inputImage = document.getElementById("imageFile");
+// Profile Image
 
-image.addEventListener("click", () => {
-  preventDefault();
-  inputImage.click();
-});
+// let profileImage = document.getElementById("profileImage");
+// let fileInput = document.getElementById("fileInput");
 
-inputImage.addEventListener("change", () => {
-  const file = this.files[0];
-  console.log(file);
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      image.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-  }
-});
+// profileImage.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   fileInput.click();
+// });
+
+// fileInput.addEventListener("change", function () {
+//   const file = this.files[0];
+//   console.log(file);
+//   if (file) {
+//     const reader = new FileReader();
+//     reader.onload = function (e) {
+//       profileImage.src = e.target.result;
+//     };
+//     reader.readAsDataURL(file);
+//   }
+// });
