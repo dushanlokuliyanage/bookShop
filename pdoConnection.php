@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "Dushan2006#**";
 $database = "registerBookShop";
 
 try {

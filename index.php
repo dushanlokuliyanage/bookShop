@@ -1,3 +1,5 @@
+<?php session_start()?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,47 +14,7 @@
 
 <body>
     <!-- Header / Navbar -->
-    <header>
-        <nav class="navbar section-content">
-            <a href="#" class="nav-logo" style="text-decoration: none;">
-                <h2 class="logo-text">Books</h2>
-            </a>
-
-            <ul class="nav-menu">
-
-                <button id="btnClose" class="btn btn-close"></button>
-
-                <li class=" btn btn-outline-dark ">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="btn btn-outline-dark ">
-                    <a href="#" class="nav-link">About</a>
-                </li>
-                <li class=" btn btn-outline-dark ">
-                    <a href="#" class="nav-link">Menu</a>
-                </li>
-                <li class="btn btn-outline-dark ">
-                    <a href="#" class="nav-link">Feedback</a>
-                </li>
-                <li class=" btn btn-outline-dark">
-                    <a href="#" class="nav-link">Gallery</a>
-                </li>
-                <li class=" btn btn-outline-dark ">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
-                <a href="register.php">
-                    <button class="btn btn-outline-dark" style="width: 250px;">Register</button>
-                </a>
-
-                <a href="logIn.php">
-                    <button class="btn btn-outline-dark" style="width: 100px;">Log In</button>
-                </a>
-            </ul>
-            <button id="menuOpenBtn" class="btn btn-outline-light">=
-            </button>
-        </nav>
-
-    </header>
+    <?php include "heder.php" ?>
     <!-- Heder Section -->
     <main>
         <section class="hero-section">
@@ -125,62 +87,7 @@
         <section class="menu-section">
             <h2 class="section-title">Our Books</h2>
             <div class="section-content">
-                <ul class="menu-list">
-                    <li class="menu-item border-menu">
-                        <img src="imges/download.png" alt="Books" class="menu-img">
-                        <h3 class="name">Imore you Spoekn</h3>
-                        <p class="tect">You know Someoen who read books
-                            they are interligent preoson So let's start
-                            today read reading books
-                        </p>
-                    </li>
-
-                    <li class="menu-item border-menu">
-                        <img src="imges/1200x1200wz.png" alt="Books" class="menu-img">
-                        <h3 class="name">Imore you Spoekn</h3>
-                        <p class="tect">You know Someoen who read books
-                            they are interligent preoson So let's start
-                            today read reading books
-                        </p>
-                    </li>
-
-                    <li class="menu-item border-menu">
-                        <img src="imges/1200x1200wz.png" alt="Books" class="menu-img">
-                        <h3 class="name">Imore you Spoekn</h3>
-                        <p class="tect">You know Someoen who read books
-                            they are interligent preoson So let's start
-                            today read reading books
-                        </p>
-                    </li>
-
-                    <li class="menu-item border-menu">
-                        <img src="imges/1200x1200wz.png" alt="Books" class="menu-img">
-                        <h3 class="name">Imore you Spoekn</h3>
-                        <p class="tect">You know Someoen who read books
-                            they are interligent preoson So let's start
-                            today read reading books
-                        </p>
-                    </li>
-
-                    <li class="menu-item border-menu">
-                        <img src="imges/1200x1200wz.png" alt="Books" class="menu-img">
-                        <h3 class="name">Imore you Spoekn</h3>
-                        <p class="tect">You know Someoen who read books
-                            they are interligent preoson So let's start
-                            today read reading books
-                        </p>
-                    </li>
-
-                    <li class="menu-item border-menu">
-                        <img src="imges/1200x1200wz.png" alt="Books" class="menu-img">
-                        <h3 class="name">Imore you Spoekn</h3>
-                        <p class="tect">You know Someoen who read books
-                            they are interligent preoson So let's start
-                            today read reading books
-                        </p>
-                    </li>
-
-                </ul>
+                
             </div>
         </section>
 

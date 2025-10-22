@@ -20,7 +20,6 @@ if (!isset($_SESSION['user'])) {
         <style>
             body {
                 margin: 0;
-                padding-top: 40px;
                 background: #f5f6fa;
                 position: relative;
                 height: 100%;
@@ -31,6 +30,10 @@ if (!isset($_SESSION['user'])) {
     </head>
 
     <body>
+
+ <!-- Header / Navbar -->
+    <?php include "heder.php" ?>
+    <!-- Heder Section -->
 
         <!-- About Image -->
 
