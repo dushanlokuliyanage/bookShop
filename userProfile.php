@@ -11,7 +11,7 @@ if (!isset($_SESSION['user'])) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php echo $_SESSION['user']['firstName'] ?> Profile</title>
+        <title> Welcome <?php echo $_SESSION['user']['firstName'] ?></title>
 
         <!-- Link CSS -->
         <link rel="stylesheet" href="bootstrap.css">
@@ -139,5 +139,5 @@ if (!isset($_SESSION['user'])) {
     </html>
 
 <?php
-    // unset($_SESSION['user']);
+     unset($_SESSION['user']);
 }
