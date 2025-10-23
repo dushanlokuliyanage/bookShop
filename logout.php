@@ -18,7 +18,7 @@ if($_SESSION['user']){
 
     <p>Redirecting to the homepage in 2 seconds...</p>
 
-    <script>setTimeout(function(){window.location.href="index.php";},10000);</script>
+    <script>setTimeout(function(){window.location.href="index.php";},2000);</script>
 
     </body>
     </html>';

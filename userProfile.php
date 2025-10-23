@@ -139,5 +139,5 @@ if (!isset($_SESSION['user'])) {
     </html>
 
 <?php
-     unset($_SESSION['user']);
+    // unset($_SESSION['user']);
 }

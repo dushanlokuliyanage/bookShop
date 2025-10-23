@@ -100,11 +100,9 @@ session_start();
                         <div class="col-12 d-grid">
                             <button class="btn btn-outline-primary">Sign Up</button>
                         </div>
-
-                        <a href="logIn.php" style="text-decoration: none;">
-                            <div class="col-12 d-grid">
-                                <button class="btn btn-outline-dark">Already have an account? Sign In </button>
-                            </div>
+                        
+                        <a href="logIn.php" class="btn btn-outline-dark d-grid col-12" style="text-decoration: none;">
+                            Already have an account? Sign In
                         </a>
 
                     </div>

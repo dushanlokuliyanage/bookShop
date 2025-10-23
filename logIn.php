@@ -46,8 +46,8 @@
                         unset($_SESSION['error']);
                     }
 
-                     if (isset($_SESSION['user'])) {
-                         unset($_SESSION['data']);
+                    if (isset($_SESSION['user'])) {
+                        unset($_SESSION['data']);
                     }
 
                     ?>
@@ -60,12 +60,17 @@
 
                     <div class="col-12">
                         <lable class="form-lable">Password</lable>
-                        <a href="" style="margin-left: 145px;">Forgot Passowrd</a>
+                        <a href="fogotPassword.php" style="margin-left: 145px;">Forgot Passowrd</a>
                         <input type="password" class="form-control" name="password" value="<?php echo htmlspecialchars($_SESSION['data'][1] ?? '', ENT_QUOTES) ?>">
                     </div>
                     <div class="col-12 d-grid mt-4">
-                        <button class="btn btn-outline-dark">Sign In</button>
+                        <button class="btn btn-outline-primary">Sign In</button>
                     </div>
+
+                    <a href="register.php" class="btn btn-outline-dark d-grid col-12 " style="text-decoration: none;">
+                        I didn't have Account, Register
+                    </a>
+
 
                 </div>
             </form>
