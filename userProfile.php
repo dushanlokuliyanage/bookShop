@@ -1,14 +1,11 @@
 <?php
-
 session_start();
-
 if (!isset($_SESSION['user'])) {
     header("Location: register.php");
     exit();
 }
 
-// Now safe to get image
-$profileImage = $_SESSION['user']['profile_image'] ?? 'default.png';
+$profileImage = $_SESSION['user']['profile_image'];
 
 ?>
 <!DOCTYPE html>
@@ -50,10 +47,10 @@ $profileImage = $_SESSION['user']['profile_image'] ?? 'default.png';
                 <form action="uploadProfileImage.php" method="POST" enctype="multipart/form-data">
                     <h4 style="color: lightseagreen; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;"> Its,<?php echo $_SESSION['user']['firstName'] ?> </h4>
                     <div>
-                        <img src="uploads/<?php echo $profileImage; ?>" class="profileImage mt-2" id="profileImage" style="cursor: pointer;">
+                        <img src="uploads/<?php echo $profileImage; ?>" class="profileImage mt-2" id="profileImage" style="cursor: pointer">
                    
                         <input type="file" id="fileInput" accept="image/*" name="profileImage" class="form-control mt-3">
-                        <input type="submit" class="form-control btn btn-primary mt-3" value="Upload Image" name="upload" class="col-2">
+                        <!-- <input type="submit" class="form-control btn btn-primary mt-3" value="Upload Image" name="upload" class="col-2"> -->
 
                     </div>
 
@@ -67,7 +64,7 @@ $profileImage = $_SESSION['user']['profile_image'] ?? 'default.png';
 
                     <div class="g-2 row col-12 justify-content-center">
                         <div class="col-6 d-grid ">
-                            <button class="btn btn-outline-primary">Update </button>
+                        <input type="submit" class="form-control btn btn-primary mt-3" value="Upload" name="upload" class="col-2">
                         </div>
                     </div>
                 </form>

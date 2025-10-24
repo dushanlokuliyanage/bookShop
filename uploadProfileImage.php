@@ -2,7 +2,6 @@
 session_start();
 include "pdoConnection.php";
 
-
 if (isset($_POST['upload'])) {
 
   $user_id = $_SESSION['user']['id'];
@@ -25,8 +24,24 @@ if (isset($_POST['upload'])) {
     header("Location: userProfile.php?success=1");
     exit();
   } else {
-    echo "Failed to Upload Image";
+    echo '<!doctype html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="2;url=index.php">
+    <title>Redirecting...</title>
+    <style>body{font-family:Arial,Helvetica,sans-serif;text-align:center;padding:40px}</style>
+    </head>
+
+    <body>
+
+    <h2 style="color:green"> Please Upload Your Image before click the Upload Button..</h2>
+
+    <p>Redirecting to the Profile Page in 2 seconds...</p>
+
+    <script>setTimeout(function(){window.location.href="userProfile.php";},2000);</script>
+
+    </body>
+    </html>';
   }
-
-
 }
