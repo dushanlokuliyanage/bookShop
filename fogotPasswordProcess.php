@@ -23,7 +23,7 @@ if (!empty($errors)) {
 
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($user['gmail'] == $gmail) {
+    if ($user && $user['gmail'] == $gmail) {
         // echo "Yes u are alredy registerd User";
         $min = 1000;
         $max = 9999;
@@ -42,6 +42,10 @@ if (!empty($errors)) {
             window.open('newPassword.php','_blank');
               window.opener?.location.reload();
            </script>";
+        exit();
+    } else {
+        $_SESSION['erorr'] = "No user found or email failed!";
+        header("Location: fogotPassword.php");
         exit();
     }
 }

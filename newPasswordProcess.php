@@ -22,7 +22,6 @@ if ($newpw != $rePw) $errors[] = "Password does not match, check again!";
 if (!empty($errors)) {
     foreach ($errors as $error) {
         $_SESSION['erorrNewPw'] = $error;
-        var_dump($error);
         header("Location: newPassword.php");
         exit();
     }

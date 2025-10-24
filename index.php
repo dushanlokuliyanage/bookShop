@@ -1,4 +1,7 @@
-<?php session_start()?>
+<?php
+session_start();
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -87,7 +90,11 @@
         <section class="menu-section">
             <h2 class="section-title">Our Books</h2>
             <div class="section-content">
-                
+
+
+
+
+
             </div>
         </section>
 
@@ -97,31 +104,7 @@
             <div class="section-content border-contact">
                 <h2 class="section-title">Contact Us</h2>
                 <ul class="contact-info-list">
-                    <li class="contact-info">
-                        <!-- <i class="#">Add Icon</i> -->
-                        <p>350 A Colombo 7, Branse Place</p>
-                    </li>
-
-                    <li class="contact-info">
-                        <!-- <i class="#">Add Icon</i> -->
-                        <p>dushanlokuliyanage@gmail.com</p>
-                    </li>
-
-                    <li class="contact-info">
-                        <!-- <i class="#">Add Icon</i> -->
-                        <p>+94 75 925 5256</p>
-                    </li>
-
-                    <li class="contact-info">
-                        <!-- <i class="#">Add Icon</i> -->
-                        <p>Monday - Friday: 9.00 AM - 5.00 PM</p>
-                    </li>
-
-                    <li class="contact-info">
-                        <!-- <i class="#">Add Icon</i> -->
-                        <p>Sunday: Closed </p>
-                    </li>
-
+                
                     <li class="contact-info">
                         <!-- <i class="#">Add Icon</i> -->
                         <a href="http://itsme-dm.github.io" style="text-decoration: none;" target="_blank">
