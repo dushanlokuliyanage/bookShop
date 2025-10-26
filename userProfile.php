@@ -143,11 +143,10 @@ $profileImage = $_SESSION['user']['profile_image'];
 
     <script>
         document.getElementById("updateBtn").onclick = function() {
-            // Enable all inputs
+   
             let inputs = document.querySelectorAll("#profileForm input");
             inputs.forEach(input => input.disabled = false);
 
-            // Show Save button and hide Edit button
             document.getElementById("saveBtn").style.display = "inline-block";
             document.getElementById("updateBtn").style.display = "none";
         }
