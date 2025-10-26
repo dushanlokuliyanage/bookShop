@@ -79,6 +79,9 @@
             <div class="dropdown" id="dropdownMenu">
                 <a href="userProfile.php">Profile</a>
                 <a href="logout.php">Logout</a>
+                <form action="deleteAccount.php" method="POST" onsubmit="return confirm('Are you sure you want to delete your account?');">
+                    <button type="submit" class="btn btn-outline-danger" name="delete">Delect Account</button>
+                </form>
             </div>
         <?php } ?>
         </nav>
