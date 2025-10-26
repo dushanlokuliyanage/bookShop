@@ -48,7 +48,7 @@ $profileImage = $_SESSION['user']['profile_image'];
                     <h4 style="color: lightseagreen; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;"> Its,<?php echo $_SESSION['user']['firstName'] ?> </h4>
                     <div>
                         <img src="uploads/<?php echo $profileImage; ?>" class="profileImage mt-2" id="profileImage" style="cursor: pointer">
-                   
+
                         <input type="file" id="fileInput" accept="image/*" name="profileImage" class="form-control mt-3">
                         <!-- <input type="submit" class="form-control btn btn-primary mt-3" value="Upload Image" name="upload" class="col-2"> -->
 
@@ -64,7 +64,7 @@ $profileImage = $_SESSION['user']['profile_image'];
 
                     <div class="g-2 row col-12 justify-content-center">
                         <div class="col-6 d-grid ">
-                        <input type="submit" class="form-control btn btn-primary mt-3" value="Upload" name="upload" class="col-2">
+                            <input type="submit" class="form-control btn btn-primary mt-3" value="Upload" name="upload" class="col-2">
                         </div>
                     </div>
                 </form>
@@ -75,67 +75,83 @@ $profileImage = $_SESSION['user']['profile_image'];
 
         <!-- About Datails -->
 
-        <div class="container vh-100 justify-content-center align-items-center d-flex ">
-            <div class="col-12 col-md-8 col-lg-8 bg-light p-5 shadow rounded-4 row g-4">
+        <form action="updateProfile.php" method="POST" id="profileForm">
+            <div class="container vh-100 justify-content-center align-items-center d-flex ">
+                <div class="col-12 col-md-8 col-lg-8 bg-light p-5 shadow rounded-4 row g-4">
 
-                <h4 style="color: lightseagreen; font-family: Verdana, Geneva, Tahoma, sans-serif;">Personal Datails</h4>
-
-
-                <div class="col-6">
-                    <lable class="form-lable fs-5">First Name</lable>
-                    <input type="text" class="form-control" name="firstName" value="<?php echo htmlspecialchars($_SESSION['user']['firstName'] ?? '', ENT_QUOTES); ?>" disabled>
-                </div>
-
-                <div class="col-6 ">
-                    <lable class="form-lable fs-5 ">Last Name</lable>
-                    <input type="text" class="form-control" name="lastName" value="<?php echo htmlspecialchars($_SESSION['user']['lastName'] ?? '', ENT_QUOTES); ?>" disabled>
-                </div>
-
-                <div class="col-12">
-                    <lable class="form-lable fs-5">Email</lable>
-                    <input type="email" class="form-control" name="gmail" value="<?php echo htmlspecialchars($_SESSION['user']['gmail'] ?? '', ENT_QUOTES); ?>" disabled>
-                </div>
+                    <h4 style="color: lightseagreen; font-family: Verdana, Geneva, Tahoma, sans-serif;">Personal Datails</h4>
 
 
-                <div class="col-6">
-                    <lable class="form-lable fs-5">Phone Number</lable>
-                    <input type="text" class="form-control" name="pNumber" value="0<?php echo htmlspecialchars($_SESSION['user']['pNumber'] ?? '', ENT_QUOTES); ?>" disabled>
-                </div>
-
-
-                <div class="col-6">
-                    <lable class="form-lable fs-5">Gender</lable>
-                    <input type="text" class="form-control" name="gender" value="<?php echo htmlspecialchars($_SESSION['user']['gender'] ?? '', ENT_QUOTES); ?>" disabled>
-                </div>
-
-
-                <div class="col-12">
-                    <lable class="form-lable fs-5">National Identy Card</lable>
-                    <input type="text" class="form-control" name="nic" value="<?php echo htmlspecialchars($_SESSION['user']['nic'] ?? '', ENT_QUOTES); ?>" disabled>
-                </div>
-
-                <div class="col-12">
-                    <lable class="form-lable fs-5">Address</lable>
-                    <input type="text" class="form-control" name="address" value="<?php echo htmlspecialchars($_SESSION['user']['address'] ?? '', ENT_QUOTES); ?>" disabled>
-                </div>
-
-                <div class="g-4 row col-12 justify-content-center">
-
-                    <!-- <div class="col-4 d-grid ">
-                        <button class="btn btn-outline-dark">Clacel</button>
-                    </div> -->
-
-                    <div class="col-6 d-grid ">
-                        <button class="btn btn-outline-primary">Update </button>
+                    <div class="col-6">
+                        <lable class="form-lable fs-5">First Name</lable>
+                        <input type="text" class="form-control" name="firstName" value="<?php echo htmlspecialchars($_SESSION['user']['firstName'] ?? '', ENT_QUOTES); ?>" disabled>
                     </div>
+
+                    <div class="col-6 ">
+                        <lable class="form-lable fs-5 ">Last Name</lable>
+                        <input type="text" class="form-control" name="lastName" value="<?php echo htmlspecialchars($_SESSION['user']['lastName'] ?? '', ENT_QUOTES); ?>" disabled>
+                    </div>
+
+                    <div class="col-12">
+                        <lable class="form-lable fs-5">Email</lable>
+                        <input type="email" class="form-control" name="gmail" value="<?php echo htmlspecialchars($_SESSION['user']['gmail'] ?? '', ENT_QUOTES); ?>" disabled>
+                    </div>
+
+
+                    <div class="col-6">
+                        <lable class="form-lable fs-5">Phone Number</lable>
+                        <input type="text" class="form-control" name="pNumber" value="0<?php echo htmlspecialchars($_SESSION['user']['pNumber'] ?? '', ENT_QUOTES); ?>" disabled>
+                    </div>
+
+
+                    <div class="col-6">
+                        <lable class="form-lable fs-5">Gender</lable>
+                        <input type="text" class="form-control" name="gender" value="<?php echo htmlspecialchars($_SESSION['user']['gender'] ?? '', ENT_QUOTES); ?>" disabled>
+                    </div>
+
+
+                    <div class="col-12">
+                        <lable class="form-lable fs-5">National Identy Card</lable>
+                        <input type="text" class="form-control" name="nic" value="<?php echo htmlspecialchars($_SESSION['user']['nic'] ?? '', ENT_QUOTES); ?>" disabled>
+                    </div>
+
+                    <div class="col-12">
+                        <lable class="form-lable fs-5">Address</lable>
+                        <input type="text" class="form-control" name="address" value="<?php echo htmlspecialchars($_SESSION['user']['address'] ?? '', ENT_QUOTES); ?>" disabled>
+                    </div>
+
+                    <div class="g-3 row col-12 justify-content-center">
+
+                        <div class="col-4 d-grid ">
+                            <button class="btn btn-outline-dark" id="saveBtn" name="saveBtn" type="submit" style="display:none;">Save</button>
+                        </div>
+
+                    </div>
+
+                    <div class="g-3 row col-12 justify-content-center">
+                        <div class="col-6 d-grid ">
+                            <button class="btn btn-outline-primary" name="updateBtn" id="updateBtn" type="button">Update </button>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
-
     </div>
+    </form>
 
+    <script>
+        document.getElementById("updateBtn").onclick = function() {
+            // Enable all inputs
+            let inputs = document.querySelectorAll("#profileForm input");
+            inputs.forEach(input => input.disabled = false);
+
+            // Show Save button and hide Edit button
+            document.getElementById("saveBtn").style.display = "inline-block";
+            document.getElementById("updateBtn").style.display = "none";
+        }
+    </script>
 
     <!-- Link Js -->
     <script src="script.js"></script>
